@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Marco Strusi, tech reviews</title>
+<meta name="description" content="I review keyboards, audio, flashlights and everyday tech after weeks of daily use, on Reddit and YouTube Shorts, with my own photos and video. Information for brands.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233B36E6'/%3E%3Cpath d='M8 23V9h3.2l4.8 7 4.8-7H24v14h-3.2v-8.6L16 21l-4.8-6.6V23z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="canonical" href="https://marco82k.github.io/marco-tech-review/">
+<meta name="theme-color" content="#E4E5E0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1122" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marco82k.github.io/marco-tech-review/">
+<meta property="og:title" content="Marco Strusi, tech reviews">
+<meta property="og:description" content="Honest tech reviews after weeks of daily use, on Reddit and YouTube Shorts, with my own photos and video.">
+<meta property="og:image" content="https://marco82k.github.io/marco-tech-review/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:opsz,wght@6..72,400..600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  /* Colori presi dalla scrivania: muro grigio, tastiera nera, schermo blu.
+     Di notte (tema scuro) lo sfondo diventa il blu-indaco del monitor. */
+  :root {
+    --bg: #E4E5E0;
+    --ink: #17181C;
+    --pencil: #55585E;
+    --rule: #C3C6BF;
+    --bar: #9A9DA3;
+    --screen: #3B36E6;
+    --on-screen: #FFFFFF;
+    --glow-1: #3B36E6;
+    --glow-2: #8B3DFF;
+    --glow-max: .5;
+    --btn-glow: rgba(59, 54, 230, .45);
+    --key-edge: #24209C;
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --text: "Newsreader", Georgia, "Times New Roman", serif;
+    --page: 1200px;
+    --gutter: clamp(16px, 4vw, 40px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1122;
+      --ink: #E6E7EF;
+      --pencil: #9EA2B8;
+      --rule: #272B47;
+      --bar: #4A4F70;
+      --screen: #8C88FF;
+      --on-screen: #0F1122;
+      --glow-1: #4F49FF;
+      --glow-2: #A04BFF;
+      --glow-max: .8;
+      --btn-glow: rgba(140, 136, 255, .55);
+      --key-edge: #4B4896;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1122;
+    --ink: #E6E7EF;
+    --pencil: #9EA2B8;
+    --rule: #272B47;
+    --bar: #4A4F70;
+    --screen: #8C88FF;
+    --on-screen: #0F1122;
+    --glow-1: #4F49FF;
+    --glow-2: #A04BFF;
+    --glow-max: .8;
+    --btn-glow: rgba(140, 136, 255, .55);
+    --key-edge: #4B4896;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { overflow-x: clip; margin: 0; background: var(--bg); color: var(--ink); font-family: var(--text); font-size: 1.125rem; line-height: 1.62; -webkit-font-smoothing: antialiased; }
+  img, video { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+  a:hover { color: var(--screen); }
+  :focus-visible { outline: 2px solid var(--screen); outline-offset: 3px; border-radius: 2px; }
+  [id] { scroll-margin-top: 88px; }
+  p { margin: 0; }
+  h1, h2, h3, h4 { margin: 0; font-family: var(--display); }
+
+  .wrap { max-width: var(--page); margin-inline: auto; padding-inline: var(--gutter); }
+
+  .skip { position: absolute; left: var(--gutter); top: -60px; z-index: 20; padding: 10px 14px; border-radius: 4px; background: var(--screen); color: var(--on-screen); font: 600 .9375rem/1 var(--display); text-decoration: none; }
+  .skip:focus { top: 12px; }
+
+  /* ---------- barra in alto ---------- */
+  .top { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--rule); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 64px; }
+  .name { font: 700 1.0625rem/1 var(--display); font-stretch: 112%; letter-spacing: -0.01em; text-decoration: none; }
+  .nav { display: flex; align-items: center; gap: 28px; font: 500 .9375rem/1 var(--display); }
+  .nav a { text-decoration: none; }
+
+  /* pulsanti come tasti: il bordo sotto è il fianco del tasto, al passaggio si accende la luce, al clic il tasto scende */
+  .btn { display: inline-block; padding: 16px 22px; border-radius: 4px; background: var(--screen); color: var(--on-screen); font: 600 1rem/1 var(--display); text-decoration: none; white-space: nowrap; box-shadow: 0 3px 0 var(--key-edge); transition: transform .08s ease-out, box-shadow .25s ease; }
+  .btn:hover { color: var(--on-screen); box-shadow: 0 3px 0 var(--key-edge), 0 10px 32px -6px var(--btn-glow); }
+  .btn:active { transform: translateY(3px); box-shadow: 0 0 0 var(--key-edge), 0 4px 18px -6px var(--btn-glow); }
+  .btn.small { padding: 11px 16px; font-size: .9375rem; }
+
+  /* ---------- apertura ---------- */
+  .hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "title title" "intro photo" "brands photo"; column-gap: clamp(32px, 5vw, 72px); padding-block: clamp(36px, 5vw, 64px) clamp(64px, 8vw, 112px); }
+  .hero h1 { grid-area: title; margin-bottom: clamp(28px, 3.5vw, 48px); font-weight: 800; font-stretch: 125%; font-size: clamp(2.4rem, 8vw, 7.25rem); line-height: .92; letter-spacing: -0.03em; text-wrap: balance; }
+  .hero-intro { grid-area: intro; }
+  .lead { max-width: 30em; font-size: 1.3125rem; line-height: 1.5; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 32px; font: 500 1rem/1.3 var(--display); }
+  .hero-photo { grid-area: photo; align-self: start; position: relative; isolation: isolate; margin: 0; }
+  .hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 45%; }
+  .hero-photo::before, .hero-photo::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 24px; filter: blur(44px); pointer-events: none; will-change: opacity, transform; }
+  .hero-photo::before { background: var(--glow-1); opacity: var(--glow-max); transform: translate(-3%, -3%); animation: breathe-a 9s ease-in-out infinite; }
+  .hero-photo::after { background: var(--glow-2); opacity: calc(var(--glow-max) * .3); transform: translate(3%, 4%); animation: breathe-b 9s ease-in-out infinite; }
+  @keyframes breathe-a { 0%, 100% { opacity: var(--glow-max); transform: translate(-3%, -3%) scale(1); } 50% { opacity: calc(var(--glow-max) * .3); transform: translate(-3%, -3%) scale(.96); } }
+  @keyframes breathe-b { 0%, 100% { opacity: calc(var(--glow-max) * .3); transform: translate(3%, 4%) scale(.96); } 50% { opacity: var(--glow-max); transform: translate(3%, 4%) scale(1.03); } }
+
+  .brands { grid-area: brands; align-self: end; padding-top: 40px; }
+  .brands p { margin-bottom: 10px; font: 500 .9375rem/1.4 var(--display); color: var(--pencil); }
+  .brands ul { display: flex; flex-wrap: wrap; gap: 4px 24px; margin: 0; padding: 0; list-style: none; font: 700 clamp(1.125rem, 1.7vw, 1.5rem)/1.3 var(--display); font-stretch: 112%; letter-spacing: -0.01em; }
+  .brands li { transition: color .3s ease, text-shadow .3s ease; }
+  .brands li:hover { color: var(--screen); text-shadow: 0 0 22px var(--btn-glow); }
+  .js .brands.in li { animation: keylight 1.2s ease-out backwards; animation-delay: calc(var(--i, 0) * 120ms + 250ms); }
+  @keyframes keylight { 0% { color: var(--ink); text-shadow: none; } 25% { color: var(--screen); text-shadow: 0 0 22px var(--btn-glow); } 100% { color: var(--ink); text-shadow: none; } }
+
+  /* ---------- sezioni ---------- */
+  .band { padding-block: clamp(64px, 9vw, 120px); border-top: 1px solid var(--rule); }
+  .band h2 { font-weight: 800; font-stretch: 125%; font-size: clamp(2rem, 4.2vw, 3rem); line-height: 1; letter-spacing: -0.02em; }
+  .band-head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px clamp(32px, 6vw, 96px); align-items: end; margin-bottom: clamp(36px, 5vw, 56px); }
+  .band-head p { max-width: 34em; }
+
+  /* ---------- come funziona: diagramma di Gantt (giorni 0-21) ---------- */
+  .gantt { font-family: var(--display); }
+  .g-list { margin: 0; padding: 0; list-style: none; }
+  .g-row { display: grid; grid-template-columns: minmax(12rem, 17rem) minmax(0, 1fr); column-gap: 24px; border-top: 1px solid var(--rule); }
+  .g-list .g-row:last-child { border-bottom: 1px solid var(--rule); }
+  .g-head { border-top: 0; }
+  .g-label { padding-block: 16px; }
+  .g-label b { display: block; font-size: 1rem; font-weight: 600; line-height: 1.3; }
+  .g-label span { font-size: .875rem; color: var(--pencil); }
+  .g-head .g-label { padding-block: 0 8px; align-self: end; font-size: .875rem; color: var(--pencil); }
+  .g-track {
+    display: grid; grid-template-columns: repeat(22, minmax(0, 1fr)); align-items: center;
+    background-image:
+      linear-gradient(to right, var(--bar) 1px, transparent 1px), /* taste-skill-ignore: day grid of the timeline chart */
+      linear-gradient(to right, var(--rule) 1px, transparent 1px); /* taste-skill-ignore */
+    background-size: calc(100% * 7 / 22) 100%, calc(100% / 22) 100%;
+    border-right: 1px solid var(--rule);
+  }
+  .g-head .g-track { min-height: 30px; align-items: end; }
+  .g-head .g-track span { grid-column: var(--at); grid-row: 1; padding: 0 0 8px 6px; font-size: .8125rem; font-weight: 600; font-stretch: 75%; color: var(--pencil); }
+  .bar { grid-row: 1; grid-column: var(--from) / var(--to); height: 12px; border-radius: 2px; background: var(--ink); transform-origin: left center; }
+  .bar.mid { background: var(--bar); }
+  .bar.key { height: 22px; background: var(--screen); box-shadow: 0 0 22px 1px var(--btn-glow); }
+  .bar.dot { justify-self: center; width: 12px; border-radius: 50%; }
+
+  /* l'unico movimento della pagina: le barre si riempiono quando il diagramma entra nello schermo */
+  .js .gantt .bar { transition: transform .9s cubic-bezier(.2, .7, .2, 1) var(--delay, 0s), opacity .5s ease var(--delay, 0s); }
+  .js .gantt:not(.in) .bar { transform: scaleX(0); }
+  .js .gantt:not(.in) .bar.dot { transform: none; opacity: 0; }
+  .js .gantt .bar.key { transition: transform .9s cubic-bezier(.2, .7, .2, 1) var(--delay, 0s), box-shadow 1.2s ease calc(var(--delay, 0s) + .7s); }
+  .js .gantt:not(.in) .bar.key { box-shadow: 0 0 0 0 transparent; }
+
+  .gets-title { margin: clamp(56px, 7vw, 88px) 0 24px; font-weight: 700; font-stretch: 125%; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .gets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin: 0; padding: 0; list-style: none; }
+  .gets li { padding-top: 16px; border-top: 2px solid var(--ink); }
+  .gets h4 { margin-bottom: 8px; font-weight: 700; font-stretch: 112%; font-size: 1.125rem; line-height: 1.3; }
+  .gets p { font-size: 1.0625rem; line-height: 1.55; }
+
+  /* ---------- recensioni ---------- */
+  .reviews { margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--ink); }
+  .reviews li { border-bottom: 1px solid var(--rule); }
+  .review { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr); gap: 8px 32px; align-items: baseline; padding-block: 28px; text-decoration: none; }
+  a.review:hover { color: inherit; }
+  a.review:hover h3 { color: var(--screen); }
+  .review h3 { font-weight: 800; font-stretch: 118%; font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.05; letter-spacing: -0.015em; }
+  .review .where { justify-self: end; text-align: right; font: 500 .9375rem/1.45 var(--display); color: var(--pencil); }
+  .review .go { display: block; color: var(--screen); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+  .review.pending h3 { color: var(--pencil); }
+  .more { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 28px; font: 500 1rem/1.4 var(--display); }
+  .band .amazon-title { margin: clamp(64px, 8vw, 96px) 0 12px; }
+  .reviews.small h3 { font-size: clamp(1.25rem, 1.9vw, 1.5rem); }
+  .reviews.small .review { padding-block: 20px; }
+  .amazon-note { margin: 0 0 20px; color: var(--pencil); }
+
+  /* ---------- foto e video ---------- */
+  .shots { display: grid; gap: 12px; }
+  .shots img, .shots video { width: 100%; height: auto; }
+  .shot-wide img { aspect-ratio: 1600 / 700; object-fit: cover; }
+  .pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+  .lead-shot { position: relative; }
+  .lead-shot img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
+  .stack { display: grid; gap: 12px; }
+  .reel { display: grid; grid-template-columns: 16fr 5.06fr 5.06fr; gap: 12px; }
+  .reel video { aspect-ratio: 16 / 9; object-fit: cover; background: var(--rule); }
+  .sub { margin: 0 0 18px; font-weight: 700; font-stretch: 112%; font-size: 1.25rem; letter-spacing: -0.01em; }
+  .vids { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 12px; margin-bottom: clamp(48px, 6vw, 72px); }
+  .vids { margin-bottom: 0; }
+  .vids figure { position: relative; margin: 0; }
+  .vids video { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: var(--rule); }
+  .play { display: none; }
+  .js .play { display: grid; place-items: center; position: absolute; left: 50%; top: calc((100% - 2.4em) / 2); width: 64px; height: 64px; margin: -32px 0 0 -32px; padding: 0; border: 0; border-radius: 50%; background: rgba(15, 17, 34, .62); color: #fff; cursor: pointer; transition: transform .2s ease, background-color .2s ease; }
+  .js .play svg { width: 26px; height: 26px; margin-left: 4px; fill: currentColor; }
+  .js .play:hover { transform: scale(1.08); background: var(--screen); color: var(--on-screen); }
+  .js .play:active { transform: scale(.96); }
+  .vid.playing .play { opacity: 0; pointer-events: none; }
+  .vids-more { margin: 20px 0 clamp(56px, 7vw, 88px); }
+  .vids figcaption { min-height: 2.4em; margin-top: 8px; font: 500 .875rem/1.2 var(--display); color: var(--pencil); }
+  .portraits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .portraits img { aspect-ratio: 3 / 4; object-fit: cover; }
+  .shot-wide video { aspect-ratio: 16 / 9; object-fit: cover; }
+  .slot { display: flex; align-items: flex-end; padding: 14px; border: 1px dashed var(--bar); font: 500 .875rem/1.35 var(--display); color: var(--pencil); }
+  @media (hover: hover) {
+    .shots img, .shots video, .vids video { transition: box-shadow .45s ease; }
+    .shots img:hover, .shots video:hover, .vids video:hover { box-shadow: 0 18px 64px -14px var(--tone, var(--glow-1)); }
+  }
+
+  /* ---------- chi sono e dettagli ---------- */
+  .about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px clamp(32px, 6vw, 96px); align-items: start; }
+  .about-text h2 { margin-bottom: 28px; }
+  .about-text p { max-width: 30em; }
+  .about-text p + p { margin-top: 1em; }
+  .details h3 { margin-bottom: 20px; font-weight: 700; font-stretch: 125%; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .specs { margin: 0; border-top: 2px solid var(--ink); }
+  .specs > div { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 4px 24px; padding-block: 14px; border-bottom: 1px solid var(--rule); }
+  .specs dt { font: 600 .9375rem/1.6 var(--display); }
+  .specs dd { margin: 0; font-size: 1.0625rem; line-height: 1.55; }
+
+  /* ---------- contatti ---------- */
+  .contact h2 { font-size: clamp(2.75rem, 7vw, 5.25rem); line-height: .95; }
+  .mail { display: inline-block; margin-top: clamp(28px, 4vw, 44px); font: 700 clamp(1.25rem, 3.2vw, 2.25rem)/1.2 var(--display); font-stretch: 112%; letter-spacing: -0.01em; color: var(--screen); text-decoration-thickness: 2px; text-underline-offset: .18em; }
+  .mail { transition: text-shadow .3s ease; }
+  .mail:hover { color: var(--screen); text-shadow: 0 0 26px var(--btn-glow); }
+  .contact p { max-width: 34em; margin-top: 24px; }
+  .contact-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px clamp(32px, 6vw, 96px); align-items: end; }
+  .profiles { margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--ink); }
+  .profiles a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--rule); font-family: var(--display); text-decoration: none; }
+  .profiles a:hover { color: inherit; }
+  .profiles b { font-weight: 700; font-stretch: 112%; font-size: 1.25rem; transition: color .2s ease; }
+  .profiles a:hover b { color: var(--screen); }
+  .profiles span { font-size: .9375rem; color: var(--pencil); }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-block: 24px 32px; border-top: 1px solid var(--rule); font: 500 .875rem/1.4 var(--display); color: var(--pencil); }
+
+  /* ingresso delle sezioni: titolo, testo, poi immagini, uno dopo l'altro */
+  .js .rv { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.2, .7, .2, 1) var(--rd, 0ms), transform .7s cubic-bezier(.2, .7, .2, 1) var(--rd, 0ms); }
+  .js .rv.on { opacity: 1; transform: none; }
+
+  @media (max-width: 1000px) {
+    .gets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 860px) {
+    .nav { display: none; }
+    .hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "intro" "photo" "brands"; }
+    .hero-photo { margin-top: 36px; }
+    .band-head, .about, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+    .review { grid-template-columns: minmax(0, 1fr); }
+    .review .where { justify-self: start; text-align: left; }
+    .pair { grid-template-columns: minmax(0, 1fr); }
+    .lead-shot img { position: static; aspect-ratio: 1 / 1; }
+    .reel { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .reel .main { grid-column: 1 / -1; }
+    .slot { aspect-ratio: 9 / 16; }
+    .vids, .portraits { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .g-row { grid-template-columns: minmax(0, 1fr); }
+    .g-head .g-label { display: none; }
+    .g-label { padding-block: 14px 8px; }
+    .g-list .g-track { min-height: 30px; margin-bottom: 14px; }
+    .gets { grid-template-columns: minmax(0, 1fr); }
+    .specs > div { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .gantt .bar, .js .gantt .bar.key { transition: none; }
+    .hero-photo::before, .hero-photo::after { animation: none; }
+    .js .brands.in li { animation: none; }
+    .btn, .btn:active { transition: none; transform: none; }
+    .js .rv { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="name" href="#main">Marco Strusi</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#work">Photos and video</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn small" href="mailto:marco.strusi.tech@gmail.com?subject=Review%20collaboration">Email me</a>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <!-- ============ APERTURA ============ -->
+  <section class="hero">
+    <h1>Weeks of use, then a&nbsp;review.</h1>
+    <div class="hero-intro">
+      <p class="lead">I'm Marco Strusi, a computer engineering student in Taranto, Italy. I review keyboards, audio, flashlights and everyday tech on Reddit and YouTube Shorts, with my own photos and video.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:marco.strusi.tech@gmail.com?subject=Review%20collaboration">Email me about a product</a>
+        <a href="#reviews">See my reviews</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/akko-1.webp" width="1400" height="1220" alt="My desk: a curved monitor, the Akko 5075 V5 keyboard on a Marvel desk mat, a white mouse and a speaker" fetchpriority="high">
+    </figure>
+    <!-- BRAND: per aggiungerne uno, aggiungi una riga <li>Nome</li> -->
+    <div class="brands">
+      <p>Brands I've worked with</p>
+      <ul>
+        <li style="--i:0">Keychron</li>
+        <li style="--i:1">LISEN</li>
+        <li style="--i:2">IMALENT</li>
+        <li style="--i:3">ACEBEAM</li>
+        <li style="--i:4">EMEET</li>
+        <li style="--i:5">BQEYZ</li>
+        <li style="--i:6">AQIRYS</li>
+        <li style="--i:7">Douk Audio</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ COME FUNZIONA ============ -->
+  <section class="band" id="how">
+    <div class="band-head">
+      <h2>How it works</h2>
+      <p>We agree on a product by email and you ship it to me in Italy. From the day it arrives, the review takes two to three weeks:</p>
+    </div>
+
+    <div class="gantt">
+      <div class="g-row g-head" aria-hidden="true">
+        <div class="g-label">Day</div>
+        <div class="g-track">
+          <span style="--at:1">0</span>
+          <span style="--at:8">7</span>
+          <span style="--at:15">14</span>
+          <span style="--at:22">21</span>
+        </div>
+      </div>
+      <ol class="g-list">
+        <li class="g-row">
+          <div class="g-label"><b>The product arrives</b><span>Day 0</span></div>
+          <div class="g-track" aria-hidden="true"><i class="bar dot" style="--from:1; --to:2"></i></div>
+        </li>
+        <li class="g-row">
+          <div class="g-label"><b>Unboxing, photos and video</b><span>Days 1 to 3</span></div>
+          <div class="g-track" aria-hidden="true"><i class="bar mid" style="--from:2; --to:5; --delay:.15s"></i></div>
+        </li>
+        <li class="g-row">
+          <div class="g-label"><b>Daily use: studying, gaming, the train</b><span>Days 1 to 21</span></div>
+          <div class="g-track" aria-hidden="true"><i class="bar" style="--from:2; --to:23; --delay:.3s"></i></div>
+        </li>
+        <li class="g-row">
+          <div class="g-label"><b>Review live on Reddit, and your private report</b><span>Between day 14 and day 21</span></div>
+          <div class="g-track" aria-hidden="true"><i class="bar key" style="--from:15; --to:23; --delay:.9s"></i></div>
+        </li>
+      </ol>
+    </div>
+
+    <h3 class="gets-title">What you get</h3>
+    <ul class="gets">
+      <li>
+        <h4>A review on Reddit</h4>
+        <p>Long-form and honest, posted in the subreddit that fits the product and marked as a sample.</p>
+      </li>
+      <li>
+        <h4>Photos and video</h4>
+        <p>Shot by me, like the ones on this page: a gallery for the post and short vertical videos for YouTube Shorts.</p>
+      </li>
+      <li>
+        <h4>A private report</h4>
+        <p>Everything I noticed, good and bad, sent only to you.</p>
+      </li>
+      <li>
+        <h4>The link on the day</h4>
+        <p>I send you the post as soon as the review is live.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ RECENSIONI ============ -->
+  <section class="band" id="reviews">
+    <div class="band-head">
+      <h2>Reviews</h2>
+      <p>The published posts first, so you can see how I write, then the products on my desk right now.</p>
+    </div>
+
+    <!-- NUOVA RECENSIONE: copia un blocco <li>...</li> e cambia link, nome, frase e subreddit.
+         Quando avrai i numeri (visualizzazioni, upvote) puoi aggiungerli dentro <span class="where">, per esempio:
+         r/iems<br>12.000 views -->
+    <ul class="reviews">
+      <li>
+        <a class="review" href="https://www.reddit.com/r/BudgetAudiophile/comments/1x0q6cj/douk_audio_z1_review_2_weeks_with_the_allinone/" target="_blank" rel="noopener">
+          <h3>Douk Audio Z1</h3>
+          <p>Two weeks of daily use with the Z1 on my desk.</p>
+          <span class="where">r/BudgetAudiophile <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/iems/comments/1wzvlin/review_juzear_nimbus_great_build_and_accessories/" target="_blank" rel="noopener">
+          <h3>Juzear Nimbus</h3>
+          <p>In-ear monitors: great build and great accessories.</p>
+          <span class="where">r/iems <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/flashlight/comments/1xel64l/imalent_ld70_after_two_weeks_in_my_pocket_a/" target="_blank" rel="noopener">
+          <h3>IMALENT LD70</h3>
+          <p>Two weeks in my pocket with a tiny EDC flashlight.</p>
+          <span class="where">r/flashlight <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/flashlight/comments/1xejkaj/acebeam_uc3a_after_2_weeks_handson_thoughts_on_a/" target="_blank" rel="noopener">
+          <h3>ACEBEAM UC3A</h3>
+          <p>Two weeks hands-on with a 900 lm EDC light with an RGB side light.</p>
+          <span class="where">r/flashlight <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/MechanicalKeyboards/comments/1x1kqba/akko_5075_v5_he_iso_de_after_2_weeks_coming_from/" target="_blank" rel="noopener">
+          <h3>Akko 5075 V5 HE</h3>
+          <p>Magnetic-switch keyboard after two weeks. I bought this one myself.</p>
+          <span class="where">r/MechanicalKeyboards <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/ultrawidemasterrace/comments/1x1kz0c/quntis_screenlinear_dual_light_bar_on_a_curved/" target="_blank" rel="noopener">
+          <h3>Quntis ScreenLinear</h3>
+          <p>Dual light bar on my curved ultrawide monitor. I bought this one myself.</p>
+          <span class="where">r/ultrawidemasterrace <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/SmartBuying/comments/1xel10y/lisen_69w_retractable_car_charger_after_a_week_of/" target="_blank" rel="noopener">
+          <h3>LISEN 69W car charger</h3>
+          <p>4-in-1 car charger with retractable cables, after a week of use in my car.</p>
+          <span class="where">r/SmartBuying <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <!-- IN LAVORAZIONE: quando pubblichi su Reddit, trasforma il <div class="review pending"> in
+           <a class="review" href="LINK DEL POST" target="_blank" rel="noopener"> e metti subreddit + "Read the review" -->
+      <li>
+        <div class="review pending">
+          <h3>Keychron K8 Ultra</h3>
+          <p>Mechanical keyboard I use every day for coding and gaming.</p>
+          <span class="where">Sample from Keychron<br>Review in progress</span>
+        </div>
+      </li>
+    </ul>
+    <p class="more"><a href="https://www.reddit.com/user/Marco_tech_review/" target="_blank" rel="noopener">All my posts on Reddit</a></p>
+
+    <!-- AMAZON: per cambiare recensione copia un blocco <li> e metti l'ID della recensione (Rxxxx) dal link di Amazon -->
+    <h3 class="sub amazon-title">On Amazon.it</h3>
+    <p class="amazon-note">Written in Italian, only for products I bought myself. 20 so far.</p>
+    <ul class="reviews small">
+      <li>
+        <a class="review" href="https://www.amazon.it/gp/customer-reviews/R3253E1P18T4XY" target="_blank" rel="noopener">
+          <h3>MacBook Air 13" M4</h3>
+          <p>My laptop for studying, office work and light video editing.</p>
+          <span class="where">Amazon.it, 5/5 <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.amazon.it/gp/customer-reviews/R39TN0O2E458U6" target="_blank" rel="noopener">
+          <h3>34" ultrawide monitor</h3>
+          <p>Replaced my dual-monitor setup. Great for work, with honest notes on the stand and ghosting.</p>
+          <span class="where">Amazon.it, 5/5 <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.amazon.it/gp/customer-reviews/R26W3TT154OR6V" target="_blank" rel="noopener">
+          <h3>Monitor light bar</h3>
+          <p>Desk lighting with no glare on the screen and a wireless dial.</p>
+          <span class="where">Amazon.it, 5/5 <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.amazon.it/gp/customer-reviews/R3L1302SILIQCV" target="_blank" rel="noopener">
+          <h3>HUAWEI WiFi AX3 router</h3>
+          <p>Replaced my ISP router's Wi-Fi, tested on a gigabit fibre line.</p>
+          <span class="where">Amazon.it, 5/5 <span class="go">Read the review</span></span>
+        </a>
+      </li>
+    </ul>
+    <p class="more"><a href="https://www.amazon.it/gp/profile/amzn1.account.AHAUIYHFSNT2WIW4MJQ4WGRPRM4A" target="_blank" rel="noopener">All my Amazon reviews</a></p>
+  </section>
+
+  <!-- ============ FOTO E VIDEO ============ -->
+  <section class="band" id="work">
+    <div class="band-head">
+      <h2>Photos and video</h2>
+      <p>All footage and photos are mine, shot at my desk and in my car. In the edited videos the voiceover is AI-generated.</p>
+    </div>
+
+    <!-- VIDEO: per aggiungerne uno metti il file in video/ e la copertina in img/, poi copia un blocco <figure> -->
+    <h3 class="sub">Short videos</h3>
+    <div class="vids">
+      <figure class="vid">
+        <video src="video/akko-video.mp4" poster="img/akko-video-poster.webp" style="--tone:#7A3CFF" controls preload="none" playsinline width="540" height="960" aria-label="Akko 5075 V5 HE: coding and gaming"></video>
+        <button class="play" type="button" aria-label="Play: Akko 5075 V5 HE: coding and gaming"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <figcaption>Akko 5075 V5 HE: coding and gaming</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="video/akko-video-2.mp4" poster="img/akko-video-2-poster.webp" style="--tone:#7A3CFF" controls preload="none" playsinline width="540" height="960" aria-label="Akko 5075 V5 HE: 8000 Hz for €115"></video>
+        <button class="play" type="button" aria-label="Play: Akko 5075 V5 HE: 8000 Hz for €115"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <figcaption>Akko 5075 V5 HE: 8000 Hz for €115</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="video/acebeam-video.mp4" poster="img/acebeam-video-poster.webp" style="--tone:#F07A1A" controls preload="none" playsinline width="540" height="960" aria-label="ACEBEAM UC3A: pitch-black test"></video>
+        <button class="play" type="button" aria-label="Play: ACEBEAM UC3A: pitch-black test"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <figcaption>ACEBEAM UC3A: pitch-black test</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="video/imalent-video.mp4" poster="img/imalent-video-poster.webp" style="--tone:#8A3CF0" controls preload="none" playsinline width="540" height="960" aria-label="IMALENT LD70: 4000 lm in the dark"></video>
+        <button class="play" type="button" aria-label="Play: IMALENT LD70: 4000 lm in the dark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <figcaption>IMALENT LD70: 4000 lm in the dark</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="video/lisen-video.mp4" poster="img/lisen-video-poster.webp" style="--tone:#7A6CFF" controls preload="none" playsinline width="540" height="960" aria-label="LISEN 69W: no more cable mess"></video>
+        <button class="play" type="button" aria-label="Play: LISEN 69W: no more cable mess"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <figcaption>LISEN 69W: no more cable mess</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="video/acebeam-unboxing.mp4" poster="img/acebeam-unboxing-poster.webp" style="--tone:#F07A1A" controls preload="none" playsinline width="540" height="960" aria-label="Unboxing: ACEBEAM UC3A"></video>
+        <button class="play" type="button" aria-label="Play: Unboxing: ACEBEAM UC3A"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <figcaption>Unboxing: ACEBEAM UC3A</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="video/imalent-unboxing.mp4" poster="img/imalent-unboxing-poster.webp" style="--tone:#8A3CF0" controls preload="none" playsinline width="540" height="960" aria-label="Unboxing: IMALENT LD70"></video>
+        <button class="play" type="button" aria-label="Play: Unboxing: IMALENT LD70"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <figcaption>Unboxing: IMALENT LD70</figcaption>
+      </figure>
+      <figure class="vid">
+        <video src="video/lisen-unboxing.mp4" poster="img/lisen-unboxing-poster.webp" style="--tone:#7A6CFF" controls preload="none" playsinline width="540" height="960" aria-label="Unboxing: LISEN 69W"></video>
+        <button class="play" type="button" aria-label="Play: Unboxing: LISEN 69W"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <figcaption>Unboxing: LISEN 69W</figcaption>
+      </figure>
+    </div>
+    <p class="more vids-more"><a href="https://www.youtube.com/@marco_tech_review" target="_blank" rel="noopener">More on YouTube Shorts</a> <a href="https://www.tiktok.com/@marco_tech_review" target="_blank" rel="noopener">TikTok</a></p>
+
+    <!-- FOTO: metti il file in img/ e cambia src="img/..." (e alt) della foto che vuoi sostituire -->
+    <h3 class="sub">Photos</h3>
+    <div class="shots">
+      <figure class="shot-wide" style="margin:0">
+        <img src="img/akko-4.webp" style="--tone:#7A3CFF" width="1600" height="700" loading="lazy" decoding="async" alt="Akko 5075 V5 from above with the purple backlight on, on a red Marvel desk mat">
+      </figure>
+      <div class="portraits">
+        <img src="img/acebeam-1.webp" style="--tone:#F07A1A" width="800" height="1067" loading="lazy" decoding="async" alt="ACEBEAM UC3A standing on the desk with its RGB side light on">
+        <img src="img/imalent-1.webp" style="--tone:#8A3CF0" width="800" height="1067" loading="lazy" decoding="async" alt="IMALENT LD70 standing on the desk">
+        <img src="img/lisen-1.webp" style="--tone:#7A6CFF" width="800" height="1067" loading="lazy" decoding="async" alt="LISEN 69W car charger plugged into my car">
+        <img src="img/acebeam-2.webp" style="--tone:#F07A1A" width="800" height="1067" loading="lazy" decoding="async" alt="ACEBEAM UC3A in my hand with the RGB light on">
+        <img src="img/imalent-2.webp" style="--tone:#8A3CF0" width="800" height="1067" loading="lazy" decoding="async" alt="IMALENT LD70 next to its open box">
+        <img src="img/lisen-2.webp" style="--tone:#7A6CFF" width="800" height="1067" loading="lazy" decoding="async" alt="LISEN 69W car charger in my hand">
+      </div>
+      <div class="pair">
+        <figure class="lead-shot" style="margin:0">
+          <img src="img/akko-unboxing.webp" style="--tone:#E0423A" width="1200" height="1200" loading="lazy" decoding="async" alt="The Akko 5075 V5 unboxed, with keycap puller, switch tweezers, cable and spare keycaps">
+        </figure>
+        <div class="stack">
+          <img src="img/akko-3.webp" style="--tone:#B8B6D9" width="1200" height="682" loading="lazy" decoding="async" alt="The Akko 5075 V5 box on the desk mat">
+          <img src="img/akko-2.webp" style="--tone:#C9A27C" width="1200" height="562" loading="lazy" decoding="async" alt="Akko 5075 V5 from above in daylight, on a wooden desk">
+        </div>
+      </div>
+      <figure class="shot-wide" style="margin:0">
+        <video class="broll" src="video/akko-5075.mp4" style="--tone:#7A3CFF" poster="img/akko-broll-poster.webp" width="1920" height="1080" muted loop playsinline preload="none" aria-label="B-roll: typing on the Akko 5075 V5"></video>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ CHI SONO E DETTAGLI ============ -->
+  <section class="band" id="about">
+    <div class="about">
+      <div class="about-text">
+        <h2>About me</h2>
+        <p>I study computer engineering, so I like to understand how a product works, not just how it looks. I also run a small home server with Docker, which helps with anything that has software or a network behind it.</p>
+        <p>The products I review become part of my day: I study at this desk, game in the evenings and commute by train. That's where the weeks of use come from.</p>
+      </div>
+      <div class="details" id="details">
+        <h3>The details</h3>
+        <dl class="specs">
+          <div><dt>Based in</dt><dd>Taranto, Italy, in the EU. I send a shipping address once we agree on a product.</dd></div>
+          <div><dt>Language</dt><dd>Reddit reviews and videos are in English. Amazon reviews are in Italian, my native language.</dd></div>
+          <div><dt>Where I post</dt><dd>Reddit (u/Marco_tech_review) for in-depth reviews, YouTube Shorts and TikTok (@marco_tech_review) for short videos, and Amazon.it, in Italian, for products I bought myself.</dd></div>
+          <div><dt>Timing</dt><dd>The review goes live two to three weeks after the product arrives.</dd></div>
+          <div><dt>Disclosure</dt><dd>Every post says who provided the product, and my YouTube Shorts and TikTok videos of samples say so too. The opinions are my own.</dd></div>
+          <div><dt>Affiliate links</dt><dd>Welcome where the subreddit allows them, always disclosed.</dd></div>
+          <div><dt>What I review</dt><dd>Keyboards and mice, in-ear monitors, headphones and DAC/amps, EDC flashlights, chargers, power banks and car accessories, webcams and desk gear.</dd></div>
+          <!-- PUBBLICO: quando avrai i numeri, togli i segni di commento qui sotto e scrivi i dati veri
+          <div><dt>Audience</dt><dd>...</dd></div> -->
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTI ============ -->
+  <section class="band contact" id="contact">
+    <div class="contact-grid">
+      <div>
+        <h2>Get in touch</h2>
+        <a class="mail" href="mailto:marco.strusi.tech@gmail.com?subject=Review%20collaboration">marco.strusi.tech<wbr>@gmail.com</a>
+        <p>To get started, tell me which product you have in mind (a link is perfect) and roughly when it could ship.</p>
+      </div>
+      <ul class="profiles">
+        <li><a href="https://www.reddit.com/user/Marco_tech_review/" target="_blank" rel="noopener"><b>Reddit</b><span>u/Marco_tech_review</span></a></li>
+        <li><a href="https://www.youtube.com/@marco_tech_review" target="_blank" rel="noopener"><b>YouTube Shorts</b><span>@marco_tech_review</span></a></li>
+        <li><a href="https://www.tiktok.com/@marco_tech_review" target="_blank" rel="noopener"><b>TikTok</b><span>@marco_tech_review</span></a></li>
+        <li><a href="https://www.amazon.it/gp/profile/amzn1.account.AHAUIYHFSNT2WIW4MJQ4WGRPRM4A" target="_blank" rel="noopener"><b>Amazon.it</b><span>20 reviews, in Italian</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div class="foot">
+    <span>© 2026 Marco Strusi</span>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function reveal(el, threshold) {
+      if (!el) return;
+      if (reduce || !('IntersectionObserver' in window)) { el.classList.add('in'); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { el.classList.add('in'); io.disconnect(); }
+        });
+      }, { threshold: threshold });
+      io.observe(el);
+    }
+    reveal(document.querySelector('.gantt'), 0.35);
+    reveal(document.querySelector('.brands'), 0.6);
+
+    // ingresso delle sezioni
+    var groups = ['.band-head', '.gets', '.reviews', '.vids', '.portraits', '.stack', '.about-text', '.specs', '.contact-grid > div', '.profiles'];
+    var items = [];
+    groups.forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (g) {
+        Array.prototype.forEach.call(g.children, function (el, i) { el.style.setProperty('--rd', Math.min(i, 6) * 70 + 'ms'); items.push(el); });
+      });
+    });
+    document.querySelectorAll('.sub, .amazon-note, .more, .gets-title, .details h3, .shot-wide, .lead-shot').forEach(function (el) { items.push(el); });
+    if (!reduce && 'IntersectionObserver' in window) {
+      var rio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); rio.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      items.forEach(function (el) { el.classList.add('rv'); rio.observe(el); });
+    }
+
+    // b-roll: si carica e parte solo quando è sullo schermo
+    var broll = document.querySelector('.broll');
+
+    // video: pulsante play, uno alla volta
+    var vids = Array.prototype.slice.call(document.querySelectorAll('.vid video'));
+    vids.forEach(function (v) {
+      v.controls = false;
+      var fig = v.closest('.vid');
+      fig.querySelector('.play').addEventListener('click', function () { v.controls = true; v.play(); });
+      v.addEventListener('play', function () {
+        fig.classList.add('playing'); v.controls = true;
+        vids.concat([broll]).forEach(function (o) { if (o && o !== v && !o.paused) o.pause(); });
+      });
+    });
+
+    if (broll) {
+      if (reduce || !('IntersectionObserver' in window)) { broll.controls = true; }
+      else {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            var busy = vids.some(function (o) { return !o.paused; });
+            if (e.isIntersecting && !busy) { broll.play().catch(function () {}); } else { broll.pause(); }
+          });
+        }, { threshold: 0.25 }).observe(broll);
+      }
+    }
+  })();
+</script>
+</body>
+</html>
