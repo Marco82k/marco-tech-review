@@ -180,6 +180,9 @@
   .review .where { justify-self: end; text-align: right; font: 500 .9375rem/1.45 var(--display); color: var(--pencil); }
   .review .go { display: block; color: var(--screen); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
   .review.pending h3 { color: var(--pencil); }
+  .title-link { text-decoration: none; }
+  .title-link:hover { color: var(--screen); }
+  .where a.go + a.go { margin-top: 2px; }
   .more { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 28px; font: 500 1rem/1.4 var(--display); }
   .band .amazon-title { margin: clamp(64px, 8vw, 96px) 0 12px; }
   .reviews.small h3 { font-size: clamp(1.25rem, 1.9vw, 1.5rem); }
@@ -451,48 +454,48 @@
           <span class="where">r/SmartBuying <span class="go">Read the review</span></span>
         </a>
       </li>
-      <!-- IN LAVORAZIONE: quando pubblichi su Reddit, trasforma il <div class="review pending"> in
-           <a class="review" href="LINK DEL POST" target="_blank" rel="noopener"> e metti subreddit + "Read the review" -->
       <li>
-        <div class="review pending">
-          <h3>Keychron K8 Ultra</h3>
+        <div class="review">
+          <h3><a class="title-link" href="https://www.reddit.com/r/MechanicalKeyboards/comments/1xoz9d8/keychron_k8_ultra_after_three_weeks_coming_from_a/" target="_blank" rel="noopener">Keychron K8 Ultra</a></h3>
           <p>Three weeks of coding and gaming on 2.4 GHz, coming from a Razer Huntsman Mini.</p>
-          <span class="where">Sample from Keychron<br>On Reddit soon</span>
+          <span class="where">r/MechanicalKeyboards <a class="go" href="https://www.reddit.com/r/MechanicalKeyboards/comments/1xoz9d8/keychron_k8_ultra_after_three_weeks_coming_from_a/" target="_blank" rel="noopener">Read the review</a> <a class="go" href="https://www.reddit.com/r/keyboards/comments/1xozi49/keychron_k8_ultra_3_weeks_of_use/" target="_blank" rel="noopener">Also on r/keyboards</a></span>
         </div>
       </li>
       <li>
-        <div class="review pending">
+        <a class="review" href="https://www.reddit.com/r/headphones/comments/1xozlek/aqirys_andromeda_pro_after_three_weeks_my_first/" target="_blank" rel="noopener">
           <h3>AQIRYS Andromeda Pro</h3>
           <p>Three weeks with a wireless gaming headset, from study sessions to late-night shooters.</p>
-          <span class="where">Sample from AQIRYS<br>On Reddit soon</span>
-        </div>
+          <span class="where">r/headphones <span class="go">Read the review</span></span>
+        </a>
       </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/EMEETOfficial/comments/1xozp6q/emeet_s600l_after_three_weeks_the_builtin_ring/" target="_blank" rel="noopener">
+          <h3>EMEET SmartCam S600L</h3>
+          <p>Three weeks on my monitor with a 4K webcam and a built-in ring light.</p>
+          <span class="where">r/EMEETOfficial <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/iems/comments/1xozrif/bqeyz_ni_after_two_weeks_clean_fast_and_a_little/" target="_blank" rel="noopener">
+          <h3>BQEYZ Ni</h3>
+          <p>Two weeks with in-ear monitors and a modular 3.5/4.4 mm cable.</p>
+          <span class="where">r/iems <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="review" href="https://www.reddit.com/r/flashlight/comments/1xozsxa/xtar_l8_pro_15v_liion_aa_after_three_weeks_8/" target="_blank" rel="noopener">
+          <h3>XTAR L8 Pro</h3>
+          <p>Three weeks with an 8-slot charger and 1.5V Li-ion AA cells.</p>
+          <span class="where">r/flashlight <span class="go">Read the review</span></span>
+        </a>
+      </li>
+      <!-- IN LAVORAZIONE: quando pubblichi su Reddit, trasforma il <div class="review pending"> in
+           <a class="review" href="LINK DEL POST" target="_blank" rel="noopener"> e metti subreddit + "Read the review" -->
       <li>
         <div class="review pending">
           <h3>Lypertek PurePlay Z3 Pro</h3>
           <p>Three weeks on trains and at the desk, as my AirPods Pro 2 replacement.</p>
           <span class="where">Sample from Lypertek<br>On Reddit soon</span>
-        </div>
-      </li>
-      <li>
-        <div class="review pending">
-          <h3>BQEYZ Ni</h3>
-          <p>Two weeks with in-ear monitors and a modular 3.5/4.4 mm cable.</p>
-          <span class="where">Sample from BQEYZ<br>On Reddit soon</span>
-        </div>
-      </li>
-      <li>
-        <div class="review pending">
-          <h3>EMEET SmartCam S600L</h3>
-          <p>Three weeks on my monitor with a 4K webcam and a built-in ring light.</p>
-          <span class="where">Sample from EMEET<br>On Reddit soon</span>
-        </div>
-      </li>
-      <li>
-        <div class="review pending">
-          <h3>XTAR L8 Pro</h3>
-          <p>Three weeks with an 8-slot charger and 1.5V Li-ion AA cells.</p>
-          <span class="where">Sample from XTAR<br>On Reddit soon</span>
         </div>
       </li>
     </ul>
